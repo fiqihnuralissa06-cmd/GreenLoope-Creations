@@ -1,0 +1,6 @@
+{
+  "name": "GreenLoop Creations",
+  "description": "Produk Daur Ulang Berkualitas",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
