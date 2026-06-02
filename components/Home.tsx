@@ -213,29 +213,34 @@ export default function Home({ setActiveTab, addToCart, setSelectedCategory }: H
                 className="bg-white rounded-3xl overflow-hidden border border-stone-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
               >
                 {/* Visual Cover Header */}
-                <div className="bg-gradient-to-br from-emerald-50 to-stone-50 h-52 relative p-6 flex flex-col justify-between">
-                  <div className="flex justify-between items-center">
-                    <span className="bg-white/80 backdrop-blur-md text-[10px] uppercase font-mono font-bold tracking-wider text-emerald-800 px-3 py-1 rounded-full border border-emerald-50">
+                <div className="bg-stone-150 h-52 relative overflow-hidden flex flex-col justify-between group">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-stone-900/10" />
+
+                  <div className="flex justify-between items-center relative z-10 p-4">
+                    <span className="bg-white/90 backdrop-blur-md text-[10px] uppercase font-mono font-bold tracking-wider text-emerald-800 px-3 py-1 rounded-full border border-emerald-50">
                       Material: {product.plasticType}
                     </span>
                     <span className="inline-flex items-center bg-amber-500 text-white text-xs font-semibold px-2.5 py-1 rounded-lg">
                       ★ {product.rating}
                     </span>
                   </div>
-                  
-                  {/* Big visual icon placeholder instead of raw standard image */}
-                  <div className="flex justify-center items-center h-28 transform group-hover:scale-105 transition-transform">
-                    <Recycle className="h-16 w-16 text-emerald-800/20 stroke-1 animate-spin-slow" />
-                  </div>
 
-                  <div className="absolute bottom-4 left-4 right-4 bg-emerald-900/90 backdrop-blur-sm text-white px-3 py-2 rounded-xl text-xs flex justify-between items-center">
-                    <span className="font-mono text-[11px] font-medium flex items-center gap-1">
-                      <Leaf className="h-3.5 w-3.5 text-emerald-450 fill-emerald-400" />
-                      Peduli Bumi
-                    </span>
-                    <span className="font-semibold text-[10px] uppercase tracking-wide">
-                      Hemat {product.wasteSavedGrams}g Plastik
-                    </span>
+                  <div className="relative z-10 p-4">
+                    <div className="bg-emerald-950/90 backdrop-blur-sm shadow-sm text-white px-3 py-2 rounded-xl text-xs flex justify-between items-center">
+                      <span className="font-mono text-[11px] font-medium flex items-center gap-1">
+                        <Leaf className="h-3.5 w-3.5 text-emerald-300 fill-emerald-450" />
+                        Peduli Bumi
+                      </span>
+                      <span className="font-semibold text-[10px] uppercase tracking-wide">
+                        Hemat {product.wasteSavedGrams}g Plastik
+                      </span>
+                    </div>
                   </div>
                 </div>
 

@@ -240,8 +240,13 @@ export default function Cart({ cart, updateCartQuantity, removeFromCart, clearCa
                     className="bg-white p-5 rounded-2xl border border-stone-100 shadow-sm flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-left"
                   >
                     <div className="flex items-center space-x-4">
-                      <div className="bg-emerald-50 p-3 rounded-xl border border-emerald-100">
-                        <Leaf className="h-5 w-5 text-emerald-600" />
+                      <div className="bg-stone-100 w-12 h-12 rounded-xl overflow-hidden border border-stone-100 flex-shrink-0">
+                        <img
+                          src={item.product.image}
+                          alt={item.product.name}
+                          className="w-full h-full object-cover"
+                          referrerPolicy="no-referrer"
+                        />
                       </div>
                       <div>
                         <h4 className="font-sans font-bold text-base text-emerald-900">{item.product.name}</h4>

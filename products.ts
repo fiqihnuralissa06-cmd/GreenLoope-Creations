@@ -11,7 +11,7 @@ export const PRODUCTS: Product[] = [
     wasteSavedGrams: 50,
     description: 'Gantungan kunci daur ulang eksklusif dengan pola marmer alami yang terinspirasi dari keindahan alam Nusantara. Setiap buah memiliki pola corak warna unik yang tidak akan pernah sama.',
     aestheticDescription: 'Corak abstrak marmer emerald-earthy dengan finis halus premium dan gantungan kuningan anti-karat.',
-    image: 'Key',
+    image: '/src/assets/images/keychain_nusantara_1780395688172.png',
     rating: 4.8,
     reviewCount: 94
   },
@@ -25,7 +25,7 @@ export const PRODUCTS: Product[] = [
     wasteSavedGrams: 350,
     description: 'Plakat minimalis modern untuk penghargaan ramah lingkungan atau dekorasi kehormatan. Dibuat dengan presisi tinggi menggunakan teknik thermo-press.',
     aestheticDescription: 'Kombinasi warna terracotta hangat dengan tekstur terrazzo putih-hijau kontras yang elegan.',
-    image: 'Award',
+    image: '/src/assets/images/award_selaras_1780395702422.png',
     rating: 4.9,
     reviewCount: 18
   },
@@ -39,7 +39,7 @@ export const PRODUCTS: Product[] = [
     wasteSavedGrams: 280,
     description: 'Vas bunga dengan bentuk faset geometris modern yang futuristik namun tetap membumi. Sangat cocok untuk menghiasi meja kerja, ruang tamu, atau sudut baca Anda.',
     aestheticDescription: 'Finis matte satin bertekstur micro-ribs berwarna hijau botol yang memantulkan cahaya dengan lembut.',
-    image: 'Flowerpot',
+    image: '/src/assets/images/vase_aura_1780395716294.png',
     rating: 4.7,
     reviewCount: 56
   },
@@ -53,7 +53,7 @@ export const PRODUCTS: Product[] = [
     wasteSavedGrams: 180,
     description: 'Wadah lilin dekoratif dengan penutup kayu pinus bersertifikat FSC. Menghadirkan ketenangan aromaterapi sekaligus melestarikan alam sekitar.',
     aestheticDescription: 'Bintik warna-warni dinamis (terrazzo style) berpadu serasi dengan kehangatan serat kayu alami.',
-    image: 'Flame',
+    image: '/src/assets/images/candle_terrazzo_1780395732834.png',
     rating: 4.9,
     reviewCount: 42
   },
@@ -67,7 +67,7 @@ export const PRODUCTS: Product[] = [
     wasteSavedGrams: 500,
     description: 'Kotak penyimpanan serbaguna yang kuat, modular, dan dapat ditumpuk dengan rapi. Struktur kokohnya sangat ideal untuk menata pakaian, mainan, atau berkas penting.',
     aestheticDescription: 'Desain minimalis bergaris tegas dengan pegangan ergonomis bermotif abu semen modern.',
-    image: 'Box',
+    image: '/src/assets/images/box_prisma_1780395748247.png',
     rating: 4.8,
     reviewCount: 31
   },
@@ -81,7 +81,7 @@ export const PRODUCTS: Product[] = [
     wasteSavedGrams: 120,
     description: 'Botol pump estetik untuk sabun cair, losion, atau sampo. Mengurangi penggunaan plastik sekali pakai dengan sistem isi ulang (refill) yang ramah kantong.',
     aestheticDescription: 'Siluet silinder ramping berwarna charcoal amber tembus pandang dengan kepala pump bambu alami.',
-    image: 'Droplet',
+    image: '/src/assets/images/soap_dispenser_1780395762977.png',
     rating: 4.6,
     reviewCount: 112
   },
@@ -95,7 +95,7 @@ export const PRODUCTS: Product[] = [
     wasteSavedGrams: 220,
     description: 'Solusi penyimpanan terbaik untuk meja kerja Anda. Menampung pena, klip kertas, nota, hingga dilengkapi dengan penyangga ponsel cerdas yang fungsional.',
     aestheticDescription: 'Pembagian kompartemen asimetris berliku yang dinamis dengan warna abu-muda netral yang menenangkan.',
-    image: 'FolderDot',
+    image: '/src/assets/images/desk_organizer_1780395777311.png',
     rating: 4.8,
     reviewCount: 73
   },
@@ -109,7 +109,7 @@ export const PRODUCTS: Product[] = [
     wasteSavedGrams: 650,
     description: 'Dudukan laptop ergonomis dengan tingkat kemiringan yang dapat disesuaikan. Membantu menjaga postur leher Anda sekaligus mencegah laptop mengalami panas berlebih (overheat).',
     aestheticDescription: 'Rangka lipat industrial ultra-kokoh, dilapisi pad anti-selip silikon berwarna abu arang berkelas.',
-    image: 'Laptop',
+    image: '/src/assets/images/laptop_stand_1780395793957.png',
     rating: 4.9,
     reviewCount: 29
   }

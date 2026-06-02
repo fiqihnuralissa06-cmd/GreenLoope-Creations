@@ -142,10 +142,18 @@ export default function Catalog({ addToCart, selectedCategory, setSelectedCatego
                 >
                   {/* Card Media Header */}
                   <div
-                    className="bg-gradient-to-br from-emerald-50 to-stone-50 h-44 relative p-4 flex flex-col justify-between cursor-pointer group"
+                    className="bg-stone-150 h-44 relative overflow-hidden flex flex-col justify-between cursor-pointer group"
                     onClick={() => setSelectedProduct(product)}
                   >
-                    <div className="flex justify-between items-center">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-stone-900/10" />
+
+                    <div className="flex justify-between items-center relative z-10 p-4">
                       <span className="bg-white/90 backdrop-blur-md text-[10px] uppercase font-mono font-bold tracking-wider text-emerald-800 px-2.5 py-1 rounded-full border border-emerald-50">
                         {product.plasticType}
                       </span>
@@ -154,17 +162,15 @@ export default function Catalog({ addToCart, selectedCategory, setSelectedCatego
                       </span>
                     </div>
 
-                    <div className="flex justify-center items-center h-20 group-hover:scale-105 transition-transform duration-300">
-                      <Leaf className="h-12 w-12 text-emerald-800/10" />
-                    </div>
-
-                    <div className="bg-emerald-900/90 backdrop-blur-sm shadow-sm text-left text-white px-2.5 py-1.5 rounded-xl text-[10px] flex justify-between items-center">
-                      <span className="font-mono flex items-center gap-1 font-semibold">
-                        Impact
-                      </span>
-                      <span className="font-bold">
-                        Hemat {product.wasteSavedGrams}g Plastik
-                      </span>
+                    <div className="relative z-10 px-4 pb-4">
+                      <div className="bg-emerald-950/90 backdrop-blur-sm shadow-sm text-left text-white px-2.5 py-1.5 rounded-xl text-[10px] flex justify-between items-center">
+                        <span className="font-mono flex items-center gap-1 font-semibold">
+                          Impact
+                        </span>
+                        <span className="font-bold">
+                          Hemat {product.wasteSavedGrams}g Plastik
+                        </span>
+                      </div>
                     </div>
                   </div>
 
@@ -268,21 +274,32 @@ export default function Catalog({ addToCart, selectedCategory, setSelectedCatego
             {/* Modal Body */}
             <div>
               {/* Media banner */}
-              <div className="bg-gradient-to-tr from-emerald-100/40 via-emerald-50/20 to-teal-100/30 p-10 flex flex-col items-center justify-center relative min-h-64 border-b border-stone-100">
-                <Leaf className="h-20 w-20 text-emerald-600/10 py-2 animate-bounce-short" />
-                <span className="absolute top-6 left-6 font-mono text-xs uppercase bg-emerald-800 text-white font-bold px-3 py-1 rounded-full">
-                  Kategori: {CATEGORY_LABELS[selectedProduct.category]}
-                </span>
+              <div className="bg-stone-100 relative min-h-72 overflow-hidden border-b border-stone-100 flex flex-col justify-between">
+                <img
+                  src={selectedProduct.image}
+                  alt={selectedProduct.name}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-stone-900/10" />
+
+                <div className="relative z-10 p-6">
+                  <span className="font-mono text-xs uppercase bg-emerald-800 text-white font-bold px-3 py-1 rounded-full">
+                    Kategori: {CATEGORY_LABELS[selectedProduct.category]}
+                  </span>
+                </div>
                 
                 {/* Environmental impact tag inside banner */}
-                <div className="absolute bottom-6 left-6 right-6 bg-emerald-900 text-white p-4 rounded-2xl flex items-center justify-between shadow-lg">
-                  <div className="flex items-center space-x-2 text-emerald-350">
-                    <Leaf className="h-4 w-4 text-emerald-450 fill-emerald-400" />
-                    <span className="text-xs font-mono font-bold">ECO-CONTRIBUTION</span>
+                <div className="relative z-10 p-6">
+                  <div className="bg-emerald-950/90 backdrop-blur-sm text-white p-4 rounded-2xl flex items-center justify-between shadow-lg">
+                    <div className="flex items-center space-x-2 text-emerald-300">
+                      <Leaf className="h-4 w-4 text-emerald-450 fill-emerald-400" />
+                      <span className="text-xs font-mono font-bold">ECO-CONTRIBUTION</span>
+                    </div>
+                    <span className="text-xs font-bold font-mono">
+                      Menyelamatkan {selectedProduct.wasteSavedGrams}g Plastik {selectedProduct.plasticType}
+                    </span>
                   </div>
-                  <span className="text-xs font-bold font-mono">
-                    Menyelamatkan {selectedProduct.wasteSavedGrams}g Plastik {selectedProduct.plasticType}
-                  </span>
                 </div>
               </div>
 
